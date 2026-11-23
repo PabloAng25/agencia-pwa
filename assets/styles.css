@@ -102,3 +102,137 @@
         animation: none;
     }
 }
+
+/* Pantalla de carga responsiva */
+
+@media (max-width: 480px) {
+    .splash-content {
+        width: 100%;
+        padding: 20px 16px;
+        gap: 12px;
+    }
+
+    .splash-logo {
+        font-size: clamp(42px, 14vw, 56px);
+        letter-spacing: -3px;
+    }
+
+    .splash-content h2 {
+        font-size: clamp(13px, 4.1vw, 17px);
+        letter-spacing: 1px;
+        line-height: 1.4;
+        overflow-wrap: break-word;
+    }
+
+    .splash-content p {
+        font-size: clamp(9px, 2.7vw, 11px);
+        letter-spacing: 1.2px;
+        line-height: 1.5;
+    }
+
+    .splash-loader {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* Pantallas con poca altura */
+@media (max-height: 450px) {
+    .splash-content {
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .splash-logo {
+        font-size: 38px;
+    }
+}
+
+/* =====================================
+   CORRECCIÓN RESPONSIVA PARA CELULARES
+===================================== */
+
+@media (max-width: 700px) {
+
+    /* Evitar desbordamiento horizontal */
+    html, body {
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
+    /* Contenedor principal */
+    .section-wrap {
+        width: calc(100% - 38px);
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    /* Corregir el contenido de inicio */
+    .hero {
+        width: calc(100% - 38px);
+        max-width: 100%;
+        align-items: stretch;
+    }
+
+    .hero-copy {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* Ajustar títulos */
+    .hero h1 {
+        font-size: clamp(32px, 9vw, 48px);
+        letter-spacing: -1.5px;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .hero-description {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    /* Estadísticas adaptables */
+    .hero-stats {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .hero-stats div {
+        min-width: 0;
+    }
+
+    .hero-stats i {
+        display: none;
+    }
+
+    /* Elementos visuales */
+    .hero-art {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    /* Títulos de otras secciones */
+    .section-heading h2,
+    .quote-intro h2 {
+        font-size: clamp(30px, 8vw, 38px);
+        overflow-wrap: anywhere;
+    }
+
+    /* Filtros y botones */
+    .portfolio-filters,
+    .cotizacion-acciones {
+        flex-wrap: wrap;
+    }
+}
+
+/* Fondo decorativo: evitar desbordamiento en pantallas móviles. */
+@media (max-width: 700px) {
+    .ambient,
+    .ambient-one,
+    .ambient-two {
+        display: none !important;
+    }
+}
