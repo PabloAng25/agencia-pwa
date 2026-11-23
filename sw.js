@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'agencia-visual-github-v1';
+const CACHE_VERSION = 'agencia-visual-github-v2';
 const CACHE_PREFIX = 'agencia-visual-';
 const SCOPE = self.registration.scope;
 const HOME = new URL('./', SCOPE).href;
